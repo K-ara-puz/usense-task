@@ -1,0 +1,56 @@
+.appContainer {
+    background-color: rgba(0, 139, 139, 0.205);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input.easy {
+    color: red;
+}
+input.medium {
+    color: rgb(253, 165, 0);
+}
+input.hard {
+    color: green;
+}
+input.test {
+    color: blueviolet;
+}
+input {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid darkcyan;
+}
+div.inpLabel {
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+}
+div.inpLabel div {
+    margin: 10px 0;
+    background-color: rgb(172, 172, 172);
+    width: 20px;
+    height: 5px;
+}
+div.easyLabel div,
+div.mediumLabel div,
+div.hardLabel div {
+    width: 20px;
+    height: 5px;
+    margin: 10px 0;
+}
+div.easyLabel div:first-child {
+    background-color: rgb(255, 0, 0);
+}
+div.mediumLabel div:nth-child(2),
+div.mediumLabel div:nth-child(1) {
+    background-color: rgb(255, 145, 0);
+}
+div.hardLabel div {
+    background-color: green;
+}
+div.smallLabel div {
+    background-color: red;
+}
