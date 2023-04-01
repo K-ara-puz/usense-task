@@ -30,7 +30,7 @@ const App = (props) => {
   let labelRef = React.createRef();
   return (
     <div className={s.appContainer}>
-      <p>ENTER YOUR PASSWORD INTO PASSWORD VALIDATOR</p>
+      <p>ENTER YOUR PASSWORD INTO VALIDATOR</p>
       <input ref={inputRef} onChange={onInputValueChange} value={props.state.passwordValue} type='text'/>
       <div ref={labelRef} className={s.inpLabel}>
         <div></div>
