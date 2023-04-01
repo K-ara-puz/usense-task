@@ -2,21 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import state from './state.js';
 import reportWebVitals from './reportWebVitals';
-import { observer, validator } from './state.js';
+import {store} from './store.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-let renderTree = () => {  
+export let renderTree = () => {  
   root.render(
     <React.StrictMode>
-      <App validator={validator} state={state}/>
+      <App validator={store.validator.bind(store)} state={store.getState()}/>
     </React.StrictMode>
   );  
 }
-
+store.subscribe(renderTree);
 renderTree();
-observer(renderTree);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
